@@ -8,7 +8,7 @@ class nip05 extends Model
 {
     protected $guarded=[];
     protected $hidden = [
-        'id', 'created_at', 'updated_at',
+        'id', 'created_at', 'updated_at', 'relays', 'profile'
     ];
     protected function casts(): array
     {
@@ -17,6 +17,4 @@ class nip05 extends Model
             'profile' => 'array',
         ];
     }
-
-
 }
