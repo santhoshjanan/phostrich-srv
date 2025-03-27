@@ -31,7 +31,7 @@ class Nip05Controller extends Controller
         if(!$identify)
             return response(['message' => "not here!!!"], 404);
 
-        return response()->json($identify, 200, [], JSON_UNESCAPED_SLASHES|JSON_PRETTY_PRINT);
+        return response()->json([$identify->name => $identify->pubkey], 200, [], JSON_UNESCAPED_SLASHES|JSON_PRETTY_PRINT);
     }
 }
 
